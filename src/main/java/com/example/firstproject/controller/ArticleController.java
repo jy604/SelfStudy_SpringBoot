@@ -44,6 +44,7 @@ public class ArticleController {
     public String show(@PathVariable Long id, Model model) {
         log.info("id =" + id);
         // 1. id 조회해 데이터 가져오기
+        // id 형변환 오류
         Article articleEntity = articleRepository.findById(String.valueOf(id)).orElse(null);
         // 2. 모델에 데이터 등록하기
         model.addAttribute("article", articleEntity);
