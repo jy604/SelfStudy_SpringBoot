@@ -12,8 +12,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor // 매개변수 없는 기본생성자 추가
 @ToString
-@Entity
 @Getter
+@Entity
 public class Article {
     @Id
     @GeneratedValue // 대표값 자동 생성
