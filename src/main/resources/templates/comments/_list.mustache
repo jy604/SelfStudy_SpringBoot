@@ -13,7 +13,9 @@
                         data-bs-body="{{body}}"
                         data-bs-article-id="{{articleId}}">
                         수정</button>
-
+                <!-- 댓글 삭제 버튼 -->
+                <button type="button"
+                        class="btn btn-sm btn-outline-danger comment-delete-btn">삭제</button>
                 <!-- Modal -->
                 <div class="modal fade" id="comment-edit-modal" tabindex="-1"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -105,6 +107,22 @@
     alert(msg);
     // 현재 페이지 새로고침
     window.location.reload();
+    });
+    });
+    }
+</script>
+<!-- 댓글 삭제 -->
+<script>
+    {
+    // 삭제 버튼 선택
+    const commentDeleteBtns = document.querySelectorAll(".comment-delete-btn");
+    // 삭제 버튼 이벤트 처리
+    // commentDeleteBtn.addEventListener("click", function() {
+    // console.log("삭제 버튼이 클릭됐습니다..!");
+    // });
+    commentDeleteBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+    console.log("삭제 버튼이 클릭됐습니다..!");
     });
     });
     }
